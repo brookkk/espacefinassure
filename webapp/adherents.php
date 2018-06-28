@@ -59,7 +59,7 @@ if(!$_SESSION['pseudo'])
 					  
 
 				</form>
-                <table class="table table-bordered table-striped" id="dataTable_export">
+                <table class="table table-bordered table-striped" id="dataTable1">
 					<!--
 					<div class="input-group mb-3">
 						<div class="custom-file">
