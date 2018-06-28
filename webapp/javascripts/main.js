@@ -365,7 +365,7 @@
 
       "sdom": 'lBfrtip',
         
-         buttons: [
+         "buttons": [
             'copy', 'csv', 'excel', 'pdf', 'print'
         ]
 
