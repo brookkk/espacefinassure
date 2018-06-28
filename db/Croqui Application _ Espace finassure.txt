@@ -1,0 +1,42 @@
+
+LOT 1
+
+conception
+CRUD
+create : do not accept doubles CIN ( 
+
+importé avec succès
+echec d'import
+des doublons ont été rejetés
+
+)
+
+traduction => français
+angrenade à enlever
+search en haut à enlever
+1.5
+
+export
+0,75
+import
+1.25
+csv
+
+
+
+LOT 2
+Authentification
+CRUD users
+gestion d'utilisateurs
+login
+page d'adhérents personnalisée suivant la league
+archivage des adhérents / users( date suppression et user )
+
+
+
+LOT 3
+Tableaux de bord
+NB adhérents par league
+
+
+
