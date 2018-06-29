@@ -59,6 +59,10 @@ if(!$_SESSION['pseudo'])
 					  
 
 				</form>
+
+        <br>
+        <a href="./ajouter_adherent.php" class="btn btn-success btn-md">Ajouter un nouveau adhérent</a>
+        <br><br>
                 <table class="table table-bordered table-striped" id="dataTable1">
 					<!--
 					<div class="input-group mb-3">
@@ -145,7 +149,7 @@ if(!$_SESSION['pseudo'])
                       </td>
                       <td class="actions">
                         <div class="action-buttons">
-                          <a class="table-actions" href="./adherentBundle/Forms/ajouter_adherent.html"><i class="fa fa-eye"></i></a>
+                          <!--<a class="table-actions" href=""><i class="fa fa-eye"></i></a>-->
                           <a class="table-actions" href="./adherentBundle/Forms/update_adherent.php?no_licence=<?php echo $donnees['Licence No'];?>"><i class="fa fa-pencil"></i></a>
                           <a class="table-actions" onClick="return confirm('Etes vous sûr de vouloir supprimer l\'adhérent?')" href='./adherentBundle/Controllers/deleteAdherent.php?no_licence=<?php echo $donnees['Licence No'];?>'><i class="fa fa-trash-o"></i></a>
                         </div>
@@ -166,7 +170,7 @@ if(!$_SESSION['pseudo'])
         <!-- end DataTables Example -->
       </div>
     </div>
-    <div class="style-selector">
+    <!--<div class="style-selector">
       <div class="style-selector-container">
         <h2>
           Layout Style
@@ -220,6 +224,6 @@ if(!$_SESSION['pseudo'])
           <span aria-hidden="true" class="se7en-gear"></span>
         </div>
       </div>
-    </div>
+    </div>-->
   </body>
 </html>
