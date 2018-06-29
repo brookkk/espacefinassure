@@ -44,7 +44,7 @@ private $bdd= '';
 
 
 		$request = $this->bdd->prepare("INSERT IGNORE INTO 
-			`finarea`.`adherent` (`Licence No`)
+			`finarea`.`adherent` (`Licence No`, `Identity Type`, ``, ``, ``, ``, ``, ``, ``, ``)
 			  VALUES (:no_licence)");
 
 

@@ -9,11 +9,11 @@ $type_d_identite = $_POST['type_d_identite'];
 $id_identite = $_POST['id_identite'];
 $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
-$no_licence = $_POST['no_licence'];
-$no_licence = $_POST['no_licence'];
-$no_licence = $_POST['no_licence'];
-$no_licence = $_POST['no_licence'];
-$no_licence = $_POST['no_licence'];
+$categorie = $_POST['categorie'];
+$ligue = $_POST['ligue'];
+$club = $_POST['club'];
+$ville = $_POST['ville'];
+$fonction = $_POST['fonction'];
 
 //$no_licence = "hoho";
 
