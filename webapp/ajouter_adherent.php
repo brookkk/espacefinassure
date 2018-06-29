@@ -45,70 +45,70 @@ if(!$_SESSION['pseudo'])
               <div class="form-group row">
     <label for="no_licence" class="col-sm-2 col-form-label">No de licence</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="no_licence" placeholder="no de licence" required title="Numéro de licence" oninvalid="this.setCustomValidity('pri&egrave;re de remplire le num&eacute;ro de licence')" />
+      <input type="text" class="form-control" name="no_licence" placeholder="no de licence" required title="Num&eacute;ro de licence" oninvalid="this.setCustomValidity('pri&egrave;re de remplire le num&eacute;ro de licence')" oninput="setCustomValidity('')" />
     </div>
   </div>
 
                <div class="form-group row">
-    <label for="type_d_identite" class="col-sm-2 col-form-label">Type d'identité</label>
+    <label for="type_d_identite" class="col-sm-2 col-form-label">Type d'identit&eacute;</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="type_d_identite" placeholder="Type d'identité" required>
+      <input type="text" class="form-control" name="type_d_identite" placeholder="Type d'identit&eacute" required title="Type d identi&eacute;" oninvalid="this.setCustomValidity('pri&egrave;re de remplire le Type d identit&eacute;')" oninput="setCustomValidity('')"/>
     </div>
   </div>
 
                  <div class="form-group row">
     <label for="id_identite" class="col-sm-2 col-form-label">ID identité</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="id_identite" placeholder="ID identité" required>
+      <input type="text" class="form-control" name="id_identite" placeholder="ID identité" required title="ID identit&eacute;" oninvalid="this.setCustomValidity('pri&egrave;re de remplire l ID d identti&eacute;')" oninput="setCustomValidity('')"/>
     </div>
   </div>
 
             <div class="form-group row">
     <label for="nom" class="col-sm-2 col-form-label">Nom</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="nom" placeholder="Nom" required>
+      <input type="text" class="form-control" name="nom" placeholder="Nom" required title="Nom" oninvalid="this.setCustomValidity('pri&egrave;re de remplire le nom')" oninput="setCustomValidity('')"/>
     </div>
   </div>
 
       <div class="form-group row">
     <label for="prenom" class="col-sm-2 col-form-label">Prénom</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="prenom" placeholder="Prénom" required>
+      <input type="text" class="form-control" name="prenom" placeholder="Prénom" required title="Prénom" oninvalid="this.setCustomValidity('pri&egrave;re de remplire le prénom')" oninput="setCustomValidity('')">
     </div>
   </div>
 
     <div class="form-group row">
     <label for="categorie" class="col-sm-2 col-form-label">Catégorie</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="categorie" placeholder="Catégorie" required>
+      <input type="text" class="form-control" name="categorie" placeholder="Catégorie" required title="Catégorie" oninvalid="this.setCustomValidity('pri&egrave;re de remplire la Catégorie')" oninput="setCustomValidity('')"> 
     </div>
   </div>
 
     <div class="form-group row">
     <label for="ligue" class="col-sm-2 col-form-label">Ligue</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="ligue" placeholder="Ligue" required>
+      <input type="text" class="form-control" name="ligue" placeholder="Ligue" required title="Ligue" oninvalid="this.setCustomValidity('pri&egrave;re de remplire la ligue')" oninput="setCustomValidity('')">
     </div>
   </div>
 
     <div class="form-group row">
     <label for="club" class="col-sm-2 col-form-label">Club</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="club" placeholder="Club" required>
+      <input type="text" class="form-control" name="club" placeholder="Club" required title="Club" oninvalid="this.setCustomValidity('pri&egrave;re de remplire le club')" oninput="setCustomValidity('')">
     </div>
   </div>
 
     <div class="form-group row">
     <label for="ville" class="col-sm-2 col-form-label">Ville</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="ville" placeholder="Ville" required>
+      <input type="text" class="form-control" name="ville" placeholder="Ville" required title="Ville" oninvalid="this.setCustomValidity('pri&egrave;re de remplire la ville')" oninput="setCustomValidity('')">
     </div>
   </div>
 
     <div class="form-group row">
     <label for="fonction" class="col-sm-2 col-form-label">Fonction</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="fonction" placeholder="Fonction" required >
+      <input type="text" class="form-control" name="fonction" placeholder="Fonction" required  title="fonction" oninvalid="this.setCustomValidity('pri&egrave;re de remplire la fonction')" oninput="setCustomValidity('')">
     </div>
   </div>
 
