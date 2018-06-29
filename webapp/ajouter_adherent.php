@@ -45,70 +45,70 @@ if(!$_SESSION['pseudo'])
               <div class="form-group row">
     <label for="no_licence" class="col-sm-2 col-form-label">No de licence</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="no_licence" placeholder="no de licence">
+      <input type="text" class="form-control" name="no_licence" placeholder="no de licence" required title="Numéro de licence" oninvalid="this.setCustomValidity('pri&egrave;re de remplire le num&eacute;ro de licence')" />
     </div>
   </div>
 
                <div class="form-group row">
     <label for="type_d_identite" class="col-sm-2 col-form-label">Type d'identité</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="type_d_identite" placeholder="Type d'identité">
+      <input type="text" class="form-control" name="type_d_identite" placeholder="Type d'identité" required>
     </div>
   </div>
 
                  <div class="form-group row">
     <label for="id_identite" class="col-sm-2 col-form-label">ID identité</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="id_identite" placeholder="ID identité">
+      <input type="text" class="form-control" name="id_identite" placeholder="ID identité" required>
     </div>
   </div>
 
             <div class="form-group row">
     <label for="nom" class="col-sm-2 col-form-label">Nom</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="nom" placeholder="Nom">
+      <input type="text" class="form-control" name="nom" placeholder="Nom" required>
     </div>
   </div>
 
       <div class="form-group row">
     <label for="prenom" class="col-sm-2 col-form-label">Prénom</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="prenom" placeholder="Prénom">
+      <input type="text" class="form-control" name="prenom" placeholder="Prénom" required>
     </div>
   </div>
 
     <div class="form-group row">
     <label for="categorie" class="col-sm-2 col-form-label">Catégorie</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="categorie" placeholder="Catégorie">
+      <input type="text" class="form-control" name="categorie" placeholder="Catégorie" required>
     </div>
   </div>
 
     <div class="form-group row">
     <label for="ligue" class="col-sm-2 col-form-label">Ligue</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="ligue" placeholder="Ligue">
+      <input type="text" class="form-control" name="ligue" placeholder="Ligue" required>
     </div>
   </div>
 
     <div class="form-group row">
     <label for="club" class="col-sm-2 col-form-label">Club</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="club" placeholder="Club">
+      <input type="text" class="form-control" name="club" placeholder="Club" required>
     </div>
   </div>
 
     <div class="form-group row">
-    <label for="Ville" class="col-sm-2 col-form-label">ville</label>
+    <label for="ville" class="col-sm-2 col-form-label">Ville</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="Ville" placeholder="ville">
+      <input type="text" class="form-control" name="ville" placeholder="Ville" required>
     </div>
   </div>
 
     <div class="form-group row">
     <label for="fonction" class="col-sm-2 col-form-label">Fonction</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="fonction" placeholder="Fonction">
+      <input type="text" class="form-control" name="fonction" placeholder="Fonction" required >
     </div>
   </div>
 

@@ -30,7 +30,7 @@ private $bdd= '';
      }
 
 
-	public function ajouterAdherent($no_licence, $type_d_identite, $id_identite, $nom, )
+	public function ajouterAdherent($no_licence, $type_d_identite, $id_identite, $nom, $prenom, $categorie, $ligue, $club, $ville, $fonction)
 	{
 
 		//$request = $this->bdd->query('INSERT * FROM adherent');

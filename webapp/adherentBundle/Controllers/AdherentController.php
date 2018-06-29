@@ -19,7 +19,8 @@ $fonction = $_POST['fonction'];
 
 $adherent = new Crud_adherent();
 
-if($adherent->ajouterAdherent($no_licence)){
+//if($adherent->ajouterAdherent($no_licence)){
+if($adherent->ajouterAdherent($no_licence, $type_d_identite, $id_identite, $nom, $prenom, $categorie, $ligue, $club, $ville, $fonction)){
 	echo "good";
 header("Location: ../../adherents.php");
 }
