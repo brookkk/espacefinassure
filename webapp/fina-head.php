@@ -48,7 +48,10 @@
 	<script src="javascripts/jquery.bootstrap.wizard.js" type="text/javascript"></script>
 	<script src="javascripts/fullcalendar.min.js" type="text/javascript"></script>
 	<script src="javascripts/gcal.js" type="text/javascript"></script>
-	<script src="javascripts/jquery.dataTables.min.js" type="text/javascript"></script>
+	<!--	<script src="javascripts/jquery.dataTables.min.js" type="text/javascript"></script>-->
+	<script src="//cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+	
+
 	<script src="javascripts/datatable-editable.js" type="text/javascript"></script>
 	<script src="javascripts/jquery.easy-pie-chart.js" type="text/javascript"></script>
 	<script src="javascripts/excanvas.min.js" type="text/javascript"></script>
@@ -86,5 +89,26 @@
 	<script src="javascripts/dropzone.js" type="text/javascript"></script>
 	<script src="javascripts/main.js" type="text/javascript"></script>
 	<script src="javascripts/respond.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.colVis.min.js"></script>
+
+
+    <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" media="all" rel="stylesheet" type="text/css" />
+
+    <link href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css" media="all" rel="stylesheet" type="text/css" />
+
+
+
+
+	
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
   </head>

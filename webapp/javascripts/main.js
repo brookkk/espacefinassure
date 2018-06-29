@@ -363,11 +363,15 @@
         }
       ],
 
-      "sdom": 'lBfrtip',
+      dom: 'lBfrtip',
+
+      buttons: [
+            'excelHtml5',
+            'csvHtml5',
+            
+        ],
+
         
-         "buttons": [
-            'copy', 'csv', 'excel', 'pdf', 'print'
-        ]
 
     });
     $('.table').each(function() {
