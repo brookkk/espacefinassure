@@ -30,7 +30,7 @@ private $bdd= '';
      }
 
 
-	public function ajouterAdherent($no_licence)
+	public function ajouterAdherent($no_licence, $type_d_identite, $id_identite, $nom, )
 	{
 
 		//$request = $this->bdd->query('INSERT * FROM adherent');
@@ -44,12 +44,21 @@ private $bdd= '';
 
 
 		$request = $this->bdd->prepare("INSERT IGNORE INTO 
-			`finarea`.`adherent` (`Licence No`, `Identity Type`, ``, ``, ``, ``, ``, ``, ``, ``)
-			  VALUES (:no_licence)");
+			`finarea`.`adherent` (`Licence No`, `Identity Type`, `Identity ID`, `Last Name`, `First Name`, `Category`, `League`, `Club`, `City`, `Function`)
+			  VALUES (:no_licence, :type_d_identite, :id_identite, :nom, :prenom, :categorie, :ligue, :club, :ville, :fonction)");
 
 
 
 		$request->bindParam(':no_licence', $no_licence);
+		$request->bindParam(':type_d_identite', $type_d_identite);
+		$request->bindParam(':id_identite', $id_identite);
+		$request->bindParam(':nom', $nom);
+		$request->bindParam(':prenom', $prenom);
+		$request->bindParam(':categorie', $categorie);
+		$request->bindParam(':ligue', $ligue);
+		$request->bindParam(':club', $club);
+		$request->bindParam(':ville', $ville);
+		$request->bindParam(':fonction', $fonction);
 
 
 		echo "1<br>";
