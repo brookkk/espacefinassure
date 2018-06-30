@@ -78,12 +78,12 @@ if(!$_SESSION['pseudo'])
 				  <!-- Header -->
 				  <thead>
                     <th class="check-header hidden-xs"><label><input id="checkAll" name="checkAll" type="checkbox"><span></span></label></th>
-                    <th>N° licence</th>
-                    <th>Type d'identité</th>
-                    <th class="hidden-xs">ID identité</th>
+                    <th>No licence</th>
+                    <th>Type d'identit&eacute;</th>
+                    <th class="hidden-xs">ID identit&eacute;</th>
                     <th class="hidden-xs">Nom</th>
-                    <th class="hidden-xs">Prénom</th>
-					<th class="hidden-xs">Catégorie</th>
+                    <th class="hidden-xs">Pr&eacute;nom</th>
+					<th class="hidden-xs">Cat&eacute;gorie</th>
 					<th class="hidden-xs">Ligue</th>
 					<th class="hidden-xs">Club</th>
 					<th class="hidden-xs">Ville</th>
@@ -145,7 +145,7 @@ if(!$_SESSION['pseudo'])
                         <?php echo $donnees['City'];?>
                       </td>
                       <td class="hidden-xs">
-                        <span class="label label-success"><?php echo $donnees['Function'];?></span>
+                        <?php echo $donnees['Function'];?>
                       </td>
                       <td class="actions">
                         <div class="action-buttons">
