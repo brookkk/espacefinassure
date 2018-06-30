@@ -88,7 +88,14 @@ if(!$_SESSION['pseudo'])
     <div class="form-group row">
     <label for="categorie" class="col-sm-2 col-form-label">Catégorie</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="categorie" placeholder="Catégorie" required title="Catégorie" oninvalid="this.setCustomValidity('pri&egrave;re de remplire la Catégorie')" oninput="setCustomValidity('')"> 
+      <!--<input type="text" class="form-control" name="categorie" placeholder="Catégorie" required title="Catégorie" oninvalid="this.setCustomValidity('pri&egrave;re de remplire la Catégorie')" oninput="setCustomValidity('')"> 
+      -->
+
+      <select class="form-control" name="categorie">
+        <option value="Profesionnel">Profesionnel</option>
+        <option value="Amateur">Amateur</option>
+      </select>
+      
     </div>
   </div>
 
