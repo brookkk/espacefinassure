@@ -98,11 +98,10 @@ if(!$_SESSION['pseudo'])
       <!--<input type="text" class="form-control" name="ligue" placeholder="Ligue" required title="Ligue" oninvalid="this.setCustomValidity('pri&egrave;re de remplire la ligue')" oninput="setCustomValidity('')">
       -->
 
-      <select class="form-control" name="type_d_identite">
-        <option value="CIN">CIN</option>
-        <option value="PASSPORT">PASSPORT</option>
-        <option value="CARTE SEJOUR">CARTE SEJOUR</option>
-        <option value="PERMIS">PERMIS</option>
+      <select class="form-control" name="ligue">
+        <option value="GRAND CASA">GRAND CASA</option>
+        <option value="GHARB">GHARB</option>
+        <option value="TANGER">TANGER</option>
       </select>
 
     </div>
