@@ -110,7 +110,16 @@ if(!$_SESSION['pseudo'])
     <div class="form-group row">
     <label for="club" class="col-sm-2 col-form-label">Club</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="club" placeholder="Club" required title="Club" oninvalid="this.setCustomValidity('pri&egrave;re de remplire le club')" oninput="setCustomValidity('')">
+      <!--<input type="text" class="form-control" name="club" placeholder="Club" required title="Club" oninvalid="this.setCustomValidity('pri&egrave;re de remplire le club')" oninput="setCustomValidity('')">
+      -->
+
+      <select class="form-control" name="club">
+        <option value="WAC">WAC</option>
+        <option value="RCA">RCA</option>
+        <option value="ITIHAD TANGER">ITIHAD TANGER</option>
+        <option value="FUS">FUS</option>
+      </select>
+
     </div>
   </div>
 
