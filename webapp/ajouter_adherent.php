@@ -52,7 +52,15 @@ if(!$_SESSION['pseudo'])
                <div class="form-group row">
     <label for="type_d_identite" class="col-sm-2 col-form-label">Type d'identit&eacute;</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="type_d_identite" placeholder="Type d'identit&eacute" required title="Type d identi&eacute;" oninvalid="this.setCustomValidity('pri&egrave;re de remplire le Type d identit&eacute;')" oninput="setCustomValidity('')"/>
+      <!--<input type="text" class="form-control" name="type_d_identite" placeholder="Type d'identit&eacute" required title="Type d identi&eacute;" oninvalid="this.setCustomValidity('pri&egrave;re de remplire le Type d identit&eacute;')" oninput="setCustomValidity('')"/>
+      -->
+      <select class="form-control" name="type_d_identite">
+        <option value="CIN">CIN</option>
+        <option value="PASSPORT">PASSPORT</option>
+        <option value="CARTE SEJOUR">CARTE SEJOUR</option>
+        <option value="PERMIS">PERMIS</option>
+      </select>
+
     </div>
   </div>
 
@@ -87,7 +95,16 @@ if(!$_SESSION['pseudo'])
     <div class="form-group row">
     <label for="ligue" class="col-sm-2 col-form-label">Ligue</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="ligue" placeholder="Ligue" required title="Ligue" oninvalid="this.setCustomValidity('pri&egrave;re de remplire la ligue')" oninput="setCustomValidity('')">
+      <!--<input type="text" class="form-control" name="ligue" placeholder="Ligue" required title="Ligue" oninvalid="this.setCustomValidity('pri&egrave;re de remplire la ligue')" oninput="setCustomValidity('')">
+      -->
+
+      <select class="form-control" name="type_d_identite">
+        <option value="CIN">CIN</option>
+        <option value="PASSPORT">PASSPORT</option>
+        <option value="CARTE SEJOUR">CARTE SEJOUR</option>
+        <option value="PERMIS">PERMIS</option>
+      </select>
+
     </div>
   </div>
 
