@@ -95,7 +95,7 @@ if(!$_SESSION['pseudo'])
         <option value="Profesionnel">Profesionnel</option>
         <option value="Amateur">Amateur</option>
       </select>
-      
+
     </div>
   </div>
 
@@ -133,31 +133,36 @@ if(!$_SESSION['pseudo'])
     <div class="form-group row">
     <label for="ville" class="col-sm-2 col-form-label">Ville</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="ville" placeholder="Ville" required title="Ville" oninvalid="this.setCustomValidity('pri&egrave;re de remplire la ville')" oninput="setCustomValidity('')">
-    </div>
+      <!--<input type="text" class="form-control" name="ville" placeholder="Ville" required title="Ville" oninvalid="this.setCustomValidity('pri&egrave;re de remplire la ville')" oninput="setCustomValidity('')">
+    -->
+
+    <select class="form-control" name="ville">
+        <option value="Casablanca">Casablanca</option>
+        <option value="Rabat">Rabat</option>
+        <option value="Tanger">Tanger</option>
+        <option value="Marrakech">Marrakech</option>
+      </select>
+
+  </div>
   </div>
 
     <div class="form-group row">
     <label for="fonction" class="col-sm-2 col-form-label">Fonction</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="fonction" placeholder="Fonction" required  title="fonction" oninvalid="this.setCustomValidity('pri&egrave;re de remplire la fonction')" oninput="setCustomValidity('')">
+      <!--<input type="text" class="form-control" name="fonction" placeholder="Fonction" required  title="fonction" oninvalid="this.setCustomValidity('pri&egrave;re de remplire la fonction')" oninput="setCustomValidity('')">
+      -->
+
+      <select class="form-control" name="fonction">
+        <option value="Casablanca">Casablanca</option>
+        <option value="Rabat">Rabat</option>
+        <option value="Tanger">Tanger</option>
+        <option value="Marrakech">Marrakech</option>
+      </select>
+
     </div>
   </div>
 
-<!--
-No de licence: &nbsp   &nbsp &nbsp &nbsp &nbsp &nbsp   <input type="text" name="no_licence"><br>
-Type d'identité: &nbsp    &nbsp  <input type="text" name="type_d_identite"><br>
-ID identité: &nbsp    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  <input type="text" name="id_identite"><br>
-Nom: &nbsp     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp <input type="text" name="nom"><br> 
-Prénom: &nbsp    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  <input type="text" name="prenom"> <br>
-Catégorie: &nbsp      <input type="text" name="categorie"> <br>
-Ligue: &nbsp      <input type="text" name="ligue"><br> 
-Club: &nbsp      <input type="text" name="club"><br> 
-Ville: &nbsp      <input type="text" name="ville"><br>
-Fonction: &nbsp      <input type="text" name="fonction"><br>
-<input type="submit" value="Sauvegarder">
 
--->
 <div class="form-group row">
     <div class="col-sm-10">
       <button type="submit" class="btn btn-lg btn-primary">Sauvegarder</button>
