@@ -153,10 +153,11 @@ if(!$_SESSION['pseudo'])
       -->
 
       <select class="form-control" name="fonction">
-        <option value="Casablanca">Casablanca</option>
-        <option value="Rabat">Rabat</option>
-        <option value="Tanger">Tanger</option>
-        <option value="Marrakech">Marrakech</option>
+        <option value="Joueur">Joueur</option>
+        <option value="Entraineur">Entraineur</option>
+        <option value="Medecin">Medecin</option>
+        <option value="Arbitre">Arbitre</option>
+        <option value="Ramasseur">Ramasseur</option>
       </select>
 
     </div>
