@@ -53,6 +53,26 @@ if(!$_SESSION['pseudo'])
         <?php
         }
         ?>
+
+
+
+        <?php
+
+        if(isset($_GET['conforme']))
+        {
+          ?>
+          <div class="alert alert-danger">
+
+      <?php
+          echo "Le fichier que vous essayez d'importer n'est pas conforme.";
+          ?>
+        </div>
+        <?php
+        }
+        ?>
+
+
+
             <div class="widget-container fluid-height clearfix">
               <div class="heading">
                 <i class="fa fa-table"></i>Liste des adhérents assurés

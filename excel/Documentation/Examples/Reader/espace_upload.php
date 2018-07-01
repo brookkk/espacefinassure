@@ -34,9 +34,31 @@ $inputFileName = "../../../../webapp/upload/uploads/".$file_name;
 
 $sheetData = $objPHPExcel->getActiveSheet()->toArray(null,true,true,true);
 
+/*
+echo("hello <br>");
+echo($sheetData[1]['B']);*/
 
 
-//echo($sheetData[1]['A']);
+
+if($sheetData[1]['A']!="No licence"  ||
+ $sheetData[1]['B']!="Type d'identité" ||
+ $sheetData[1]['C']!="ID identité" ||
+ $sheetData[1]['D']!="Nom" ||
+ $sheetData[1]['E']!="Prénom" ||
+ $sheetData[1]['F']!="Catégorie" ||
+ $sheetData[1]['G']!="Ligue" ||
+ $sheetData[1]['H']!="Club" ||
+ $sheetData[1]['I']!="Ville" ||
+ $sheetData[1]['J']!='Fonction' 
+ )
+
+	//echo "pas conforme";
+	header("Location: ../../../../webapp/adherents.php?conforme=0");
+/*else echo "conforme";
+echo "<br>";*/
+
+else
+{
 $adher = new Crud_adherent();
 
 $nb_traites = 0;
@@ -57,11 +79,11 @@ echo ("traités : " . $nb_traites) ;
 echo "</pre>";*/
 
 $nb_non_traites = sizeof($sheetData)-$nb_traites -1;
-echo ("non traites : " . $nb_non_traites) ;
+echo ("<br>non traites : " . $nb_non_traites) ;
 
 header("Location: ../../../../webapp/adherents.php?nb_doublons=$nb_non_traites");
 
-
+}
 
 ?>
 <body>
