@@ -61,14 +61,14 @@ private $bdd= '';
 		$request->bindParam(':fonction', $fonction);
 
 
-		echo "1<br>";
+		//echo "1<br>";
 
 
 		if($request->execute()) {
 
 
-			return 1;}
-		else return 0;
+			return $request->rowCount();}
+		else return -1;
 
 
 
