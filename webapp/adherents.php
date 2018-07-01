@@ -31,21 +31,40 @@ if(!$_SESSION['pseudo'])
           </h1>
 		  		  
         </div>
+
+
+      
+
+
         <!-- DataTables Example -->
         <div class="row">
           <div class="col-lg-12">
+              <?php
+
+        if(isset($_GET['nb_doublons']))
+        {
+          ?>
+          <div class="alert alert-danger">
+
+      <?php
+          echo $_GET['nb_doublons']. " doublons ont &eacute;t&eacute; rejet&eacute;s.<br>";
+          ?>
+        </div>
+        <?php
+        }
+        ?>
             <div class="widget-container fluid-height clearfix">
               <div class="heading">
                 <i class="fa fa-table"></i>Liste des adhérents assurés
               </div>
 
               <div class="widget-content padded clearfix">
-			  <form>
+			  <form action="./upload/traitement.php" method="post" enctype="multipart/form-data">
 					  <div class="form-group">
 					  <label for="exampleInputFile">Importation d'un fichier de données</label>
 					  <div class="row">
 						  <div class="col-xs-2">
-							<input type="file" id="exampleInputFile">
+							<input type="file" name="fileToUpload" id="fileToUpload">
 						  </div>
 						  <div class="col-xs-3">
 							<button type="submit" class="btn btn-primary btn-xs">Traiter</button>

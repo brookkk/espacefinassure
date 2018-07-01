@@ -46,16 +46,20 @@ foreach($sheetData as $key=>$adherent){
 	if($key > 1){
 	if($adher->ajouterAdherent($adherent['A'], $adherent['B'], $adherent['C'], $adherent['D'], $adherent['E'], $adherent['F'], $adherent['G'], $adherent['H'], $adherent['I'], $adherent['J'])==0)
 		$non_traites[]=$adherent;
-	
+	else $nb_traites++;
 	}
 }
 
 echo ("traités : " . $nb_traites) ;
 
-echo "<pre>"; print_r($non_traites); echo "</pre>";
+/*echo "<pre>";
+ print_r($non_traites); 
+echo "</pre>";*/
 
+$nb_non_traites = sizeof($sheetData)-$nb_traites -1;
+echo ("non traites : " . $nb_non_traites) ;
 
-
+header("Location: ../../../../webapp/adherents.php?nb_doublons=$nb_non_traites");
 
 
 
