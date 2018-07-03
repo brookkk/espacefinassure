@@ -33,7 +33,6 @@ if(!$_SESSION['pseudo'])
         </div>
 
 
-      
 
 
         <!-- DataTables Example -->

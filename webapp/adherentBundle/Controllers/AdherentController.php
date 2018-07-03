@@ -2,7 +2,7 @@
 <?php  
 
 include '../Classes/Crud_adherent.php';
-
+//include '../../fina-navigation.php';
 
 $no_licence = $_POST['no_licence'];
 $type_d_identite = $_POST['type_d_identite'];
@@ -19,11 +19,10 @@ $fonction = $_POST['fonction'];
 //$no_licence = "hoho";
 
 $adherent = new Crud_adherent();
-
 //if($adherent->ajouterAdherent($no_licence)){
 if($adherent->ajouterAdherent($no_licence, $type_d_identite, $id_identite, $nom, $prenom, $categorie, $ligue, $club, $ville, $fonction)){
-	echo "good";
-header("Location: ../../adherents.php");
+	//echo "good";
+	header("Location: ../../adherents.php");
 }
 
  else

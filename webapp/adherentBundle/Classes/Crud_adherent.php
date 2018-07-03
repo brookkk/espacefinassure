@@ -40,14 +40,17 @@ private $bdd= '';
 			 `League`, `Club`, `City`, `Function`, `Creation Date`, `Created By`)
 			  VALUES (:no_licence, '', '', '', '', '', '', '', '', '', CURRENT_TIMESTAMP, '')");*/
 
+session_start();
 
+$user =  $_SESSION['pseudo'];
 
 
 		$request = $this->bdd->prepare("INSERT IGNORE INTO 
-			`finarea`.`adherent` (`Licence No`, `Identity Type`, `Identity ID`, `Last Name`, `First Name`, `Category`, `League`, `Club`, `City`, `Function`)
-			  VALUES (:no_licence, :type_d_identite, :id_identite, :nom, :prenom, :categorie, :ligue, :club, :ville, :fonction)");
+			`finarea`.`adherent` (`Licence No`, `Identity Type`, `Identity ID`, `Last Name`, `First Name`, `Category`, `League`, `Club`, `City`, `Function`, `Creation Date`, `Created By`)
+			  VALUES (:no_licence, :type_d_identite, :id_identite, :nom, :prenom, :categorie, :ligue, :club, :ville, :fonction, :time, :user)");
 
 
+		$date = date("Y-m-d H:i:s");
 
 		$request->bindParam(':no_licence', $no_licence);
 		$request->bindParam(':type_d_identite', $type_d_identite);
@@ -59,7 +62,11 @@ private $bdd= '';
 		$request->bindParam(':club', $club);
 		$request->bindParam(':ville', $ville);
 		$request->bindParam(':fonction', $fonction);
+		$request->bindParam(':time', $date  );
+		$request->bindParam(':user', $user);
 
+
+			
 
 		//echo "1<br>";
 
