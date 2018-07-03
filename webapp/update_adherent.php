@@ -22,16 +22,24 @@ if(!$_SESSION['pseudo'])
   print_r($adherent[0]);
   echo("</pre>");
 
-
+  // identity types select
    $identity_types = array("CIN", "PASSPORT", "CARTE SEJOUR", "PERMIS");
         $identity_types_position = 0;
         
           if("CIN" == $adherent[0]['Identity Type']) $identity_types_position =0;
           else if("PASSPORT" == $adherent[0]['Identity Type']) $identity_types_position =1;
           else if("CARTE SEJOUR" == $adherent[0]['Identity Type']) $identity_types_position =2;
-          else  $position =3;
+          else  $identity_types_position =3;
           
-          //echo "position : ". $identity_types_position;
+
+      // category select
+
+       $categories = array("Profesionnel", "Amateur");
+        $category_position = 0;
+        
+          if("Profesionnel" == $adherent[0]['Identity Type']) $category_position =0;
+          else  $category_position =1;
+
 
   
 ?>  
@@ -85,7 +93,7 @@ if(!$_SESSION['pseudo'])
         for($i=0; $i<4; $i++)
         {
           ?>
-          <option value="<?php echo $identity_types[$i] ?>" <?php if($position == $i) echo 'selected="selected"' ?> ><?php echo $identity_types[$i] ?></option>
+          <option value="<?php echo $identity_types[$i] ?>" <?php if($identity_types_position == $i) echo 'selected="selected"' ?> ><?php echo $identity_types[$i] ?></option>
           <?php
         }
         
