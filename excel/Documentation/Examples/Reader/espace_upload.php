@@ -16,6 +16,7 @@ date_default_timezone_set('Europe/London');
 <body>
 
  <?php
+ session_start();
 
 /** Include path **/
 set_include_path(get_include_path() . PATH_SEPARATOR . '../../../Classes/');
@@ -60,13 +61,14 @@ echo "<br>";*/
 else
 {
 $adher = new Crud_adherent();
+$user = $_SESSION['pseudo'];
 
 $nb_traites = 0;
 $non_traites = array();
 foreach($sheetData as $key=>$adherent){
 
 	if($key > 1){
-	if($adher->ajouterAdherent($adherent['A'], $adherent['B'], $adherent['C'], $adherent['D'], $adherent['E'], $adherent['F'], $adherent['G'], $adherent['H'], $adherent['I'], $adherent['J'])==0)
+	if($adher->ajouterAdherent($adherent['A'], $adherent['B'], $adherent['C'], $adherent['D'], $adherent['E'], $adherent['F'], $adherent['G'], $adherent['H'], $adherent['I'], $adherent['J'], $user)==0)
 		$non_traites[]=$adherent;
 	else $nb_traites++;
 	}

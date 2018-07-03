@@ -206,7 +206,7 @@ if(!$_SESSION['pseudo'])
                       <td class="actions">
                         <div class="action-buttons">
                           <!--<a class="table-actions" href=""><i class="fa fa-eye"></i></a>-->
-                          <a class="table-actions" href="./adherentBundle/Forms/update_adherent.php?no_licence=<?php echo $donnees['Licence No'];?>"><i class="fa fa-pencil"></i></a>
+                          <a class="table-actions" href="./update_adherent.php?no_licence=<?php echo $donnees['Licence No'];?>"><i class="fa fa-pencil"></i></a>
                           <a class="table-actions" onClick="return confirm('Etes vous sûr de vouloir supprimer l\'adhérent?')" href='./adherentBundle/Controllers/deleteAdherent.php?no_licence=<?php echo $donnees['Licence No'];?>'><i class="fa fa-trash-o"></i></a>
                         </div>
                       </td>

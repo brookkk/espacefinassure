@@ -30,7 +30,7 @@ private $bdd= '';
      }
 
 
-	public function ajouterAdherent($no_licence, $type_d_identite, $id_identite, $nom, $prenom, $categorie, $ligue, $club, $ville, $fonction)
+	public function ajouterAdherent($no_licence, $type_d_identite, $id_identite, $nom, $prenom, $categorie, $ligue, $club, $ville, $fonction, $user)
 	{
 
 		//$request = $this->bdd->query('INSERT * FROM adherent');
@@ -40,9 +40,9 @@ private $bdd= '';
 			 `League`, `Club`, `City`, `Function`, `Creation Date`, `Created By`)
 			  VALUES (:no_licence, '', '', '', '', '', '', '', '', '', CURRENT_TIMESTAMP, '')");*/
 
-session_start();
+//session_start();
 
-$user =  $_SESSION['pseudo'];
+//$user =  $_SESSION['pseudo'];
 
 
 		$request = $this->bdd->prepare("INSERT IGNORE INTO 
@@ -139,6 +139,38 @@ public function updateAdherent($id_licence, $no_licence)
 
 		if($request->execute()) 
 			return 1;
+
+		else return 0;
+
+
+
+}
+
+
+
+public function getAdherent($no_licence)
+	{
+		
+
+		//$request = $this->bdd->query('INSERT * FROM adherent');
+
+		/*$request = $this->bdd->prepare("INSERT INTO 
+			`finarea`.`adherent` (`Licence No`, `Identity Type`, `Identity ID`, `Last Name`, `First Name`, `Category`,
+			 `League`, `Club`, `City`, `Function`, `Creation Date`, `Created By`)
+			  VALUES (:no_licence, '', '', '', '', '', '', '', '', '', CURRENT_TIMESTAMP, '')");*/
+
+		$request = $this->bdd->prepare(
+
+			  "SELECT * from `finarea`.`adherent` where `Licence No`=:no_licence"
+
+
+			  );
+
+		$request->bindParam(':no_licence', $no_licence);
+
+
+		if($request->execute()) 
+			return $request->fetchAll();
 
 		else return 0;
 

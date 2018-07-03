@@ -1,17 +1,10 @@
 
 
 
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 
 <?php  
+if(!isset($_SESSION['pseudo']))
 session_start();  
   
 if(!$_SESSION['pseudo'])  

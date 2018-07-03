@@ -1,6 +1,6 @@
 
 <?php  
-
+session_start();
 include '../Classes/Crud_adherent.php';
 //include '../../fina-navigation.php';
 
@@ -17,10 +17,12 @@ $ville = $_POST['ville'];
 $fonction = $_POST['fonction'];
 
 //$no_licence = "hoho";
+$user = $_SESSION['pseudo'];
+//print_r($_SESSION['pseudo']);
 
 $adherent = new Crud_adherent();
 //if($adherent->ajouterAdherent($no_licence)){
-if($adherent->ajouterAdherent($no_licence, $type_d_identite, $id_identite, $nom, $prenom, $categorie, $ligue, $club, $ville, $fonction)){
+if($adherent->ajouterAdherent($no_licence, $type_d_identite, $id_identite, $nom, $prenom, $categorie, $ligue, $club, $ville, $fonction, $user)){
 	//echo "good";
 	header("Location: ../../adherents.php");
 }
