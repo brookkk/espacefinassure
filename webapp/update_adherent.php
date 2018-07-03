@@ -135,8 +135,22 @@ if(!$_SESSION['pseudo'])
       -->
 
       <select class="form-control" name="categorie">
-        <option value="Profesionnel">Profesionnel</option>
-        <option value="Amateur">Amateur</option>
+
+        <?php
+
+          
+        for($i=0; $i<2; $i++)
+        {
+          ?>
+          <option value="<?php echo $categories[$i] ?>" <?php if($category_position == $i) echo 'selected="selected"' ?> ><?php echo $categories[$i] ?></option>
+          <?php
+        }
+        
+        ?>
+
+
+        <!--<option value="Profesionnel">Profesionnel</option>
+        <option value="Amateur">Amateur</option>-->
       </select>
 
     </div>
