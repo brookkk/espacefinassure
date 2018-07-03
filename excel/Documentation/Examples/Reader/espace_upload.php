@@ -80,8 +80,11 @@ echo "</pre>";*/
 
 $nb_non_traites = sizeof($sheetData)-$nb_traites -1;
 echo ("<br>non traites : " . $nb_non_traites) ;
-
+if($nb_non_traites > 0)
 header("Location: ../../../../webapp/adherents.php?nb_doublons=$nb_non_traites");
+else
+header("Location: ../../../../webapp/adherents.php?traites=1");
+
 
 }
 

@@ -13,7 +13,7 @@ class Connexion
 
 try
 {
- 	$bdd = new PDO('mysql:host=localhost;dbname=finarea','root','');
+ 	$bdd = new PDO('mysql:host=127.0.0.1;dbname=finarea','root','root');
 }
 catch (Exception $e)
  	{

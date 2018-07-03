@@ -11,7 +11,7 @@ private $bdd= '';
 
 		try
 		{
-		 	$this->bdd = new PDO('mysql:host=127.0.0.1;dbname=finarea','root','');
+		 	$this->bdd = new PDO('mysql:host=127.0.0.1;dbname=finarea','root','root');
 		 	 $this->bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     //echo "Connected successfully"; 
 		}
