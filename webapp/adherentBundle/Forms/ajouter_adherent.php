@@ -1,44 +1,5 @@
 
 
-<!--
-
-<html>
-
-<head>
-</head>
-
-
-<body>
-
-<form method ="post" action="../Controllers/AdherentController.php">
-No de licence: &nbsp
-<input type="text" name="no_licence"><br><br>
-
-<input type="submit" value="Sauvegarder">
-
-</form>
-
-</body>
-
-</html>
-
-
--->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
