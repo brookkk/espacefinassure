@@ -70,6 +70,13 @@ if(!$_SESSION['pseudo'])
           else if("Marrakech" == $adherent[0]['City']) $ville_position =2;
           else  $ville_position =3;
 
+      $functions = array('Joueur', 'Entraineur', 'Medecin', 'Arbitre', 'Ramasseur');
+      $function_position = 0;
+          if("Joueur" == $adherent[0]['Function']) $function_position =0;
+          else if("Entraineur" == $adherent[0]['Function']) $function_position =1;
+          else if("Medecin" == $adherent[0]['Function']) $function_position =2;
+          else if("Arbitre" == $adherent[0]['Function']) $function_position =3;
+          else  $function_position =4;
   
 ?>  
 
@@ -281,11 +288,24 @@ if(!$_SESSION['pseudo'])
       -->
 
       <select class="form-control" name="fonction">
-        <option value="Joueur">Joueur</option>
+
+        <?php
+
+          
+        for($i=0; $i<5; $i++)
+        {
+          ?>
+          <option value="<?php echo $functions[$i] ?>" <?php if($function_position == $i) echo 'selected="selected"' ?> ><?php echo $functions[$i] ?></option>
+          <?php
+        }
+        
+        ?>
+
+        <!--<option value="Joueur">Joueur</option>
         <option value="Entraineur">Entraineur</option>
         <option value="Medecin">Medecin</option>
         <option value="Arbitre">Arbitre</option>
-        <option value="Ramasseur">Ramasseur</option>
+        <option value="Ramasseur">Ramasseur</option>-->
       </select>
 
     </div>
