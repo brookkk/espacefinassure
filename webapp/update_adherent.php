@@ -18,9 +18,9 @@ if(!$_SESSION['pseudo'])
   $ad = new Crud_adherent();
 
   $adherent = $ad->getAdherent($no_licence);
-  echo("<pre>");
+  /*echo("<pre>");
   print_r($adherent[0]);
-  echo("</pre>");
+  echo("</pre>");*/
 
   // identity types select
    $identity_types = array("CIN", "PASSPORT", "CARTE SEJOUR", "PERMIS");
@@ -67,7 +67,7 @@ if(!$_SESSION['pseudo'])
       $ville_position = 0;
           if("Casablanca" == $adherent[0]['City']) $ville_position =0;
           else if("Rabat" == $adherent[0]['City']) $ville_position =1;
-          else if("Marrakech" == $adherent[0]['City']) $ville_position =2;
+          else if("Tanger" == $adherent[0]['City']) $ville_position =2;
           else  $ville_position =3;
 
       $functions = array('Joueur', 'Entraineur', 'Medecin', 'Arbitre', 'Ramasseur');
