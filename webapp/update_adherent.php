@@ -48,8 +48,8 @@ if(!$_SESSION['pseudo'])
 
       $ligues = array('GRAND CASA', 'GHARB', 'TANGER');
       $ligue_position = 0;
-          if("GRAND CASA" == $ligues[0]['Identity Type']) $ligue_position =0;
-          else if("GHARB" == $ligues[0]['Identity Type']) $ligue_position =1;
+          if("GRAND CASA" == $adherent[0]['League']) $ligue_position =0;
+          else if("GHARB" == $adherent[0]['League']) $ligue_position =1;
           else  $ligue_position =2;
 
   
@@ -174,9 +174,22 @@ if(!$_SESSION['pseudo'])
       -->
 
       <select class="form-control" name="ligue">
-        <option value="GRAND CASA">GRAND CASA</option>
+
+        <?php
+
+          
+        for($i=0; $i<3; $i++)
+        {
+          ?>
+          <option value="<?php echo $ligues[$i] ?>" <?php if($ligue_position == $i) echo 'selected="selected"' ?> ><?php echo $ligues[$i] ?></option>
+          <?php
+        }
+        
+        ?>
+
+       <!-- <option value="GRAND CASA">GRAND CASA</option>
         <option value="GHARB">GHARB</option>
-        <option value="TANGER">TANGER</option>
+        <option value="TANGER">TANGER</option>-->
       </select>
 
     </div>
