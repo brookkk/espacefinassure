@@ -46,8 +46,8 @@ private $bdd= '';
 
 
 		$request = $this->bdd->prepare("INSERT IGNORE INTO 
-			`finarea`.`adherent` (`Licence No`, `Identity Type`, `Identity ID`, `Last Name`, `First Name`, `Category`, `League`, `Club`, `City`, `Function`, `Creation Date`, `Created By`)
-			  VALUES (:no_licence, :type_d_identite, :id_identite, :nom, :prenom, :categorie, :ligue, :club, :ville, :fonction, :time, :user)");
+			`finarea`.`adherent` (`Licence No`, `Identity Type`, `Identity ID`, `Last Name`, `First Name`, `Category`, `League`, `Club`, `City`, `Function`, `Creation Date`, `Created By`, `Last Update Date`, `Updated By`)
+			  VALUES (:no_licence, :type_d_identite, :id_identite, :nom, :prenom, :categorie, :ligue, :club, :ville, :fonction, :time, :user, '', '')");
 
 
 		$date = date("Y-m-d H:i:s");
@@ -115,7 +115,7 @@ private $bdd= '';
 
 
 
-public function updateAdherent($id_licence, $no_licence)
+public function updateAdherent($id, $no_licence)
 	{
 		
 
