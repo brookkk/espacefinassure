@@ -108,7 +108,8 @@ if(!$_SESSION['pseudo'])
           </div>
           <div  class="col-md-7">  
 
-            <form method ="post" action="./adherentBundle/Controllers/AdherentController.php">
+            <form method ="post" action="./adherentBundle/Controllers/updateAdherent.php">
+              <input type = 'hidden' id = 'id_adherent' name = 'id_adherent' value = "<?php echo($no_licence) ?>">
 
               <div class="form-group row">
     <label for="no_licence" class="col-sm-2 col-form-label">No de licence</label>
