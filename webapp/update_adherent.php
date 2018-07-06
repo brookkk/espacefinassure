@@ -58,8 +58,17 @@ if(!$_SESSION['pseudo'])
       $club_position = 0;
           if("WAC" == $adherent[0]['Club']) $club_position =0;
           else if("RCA" == $adherent[0]['Club']) $club_position =1;
-          else if("ITIHAD TANGER" == $adherent[0]['Club']) $club_position =1;
-          else  $club_position =2;
+          else if("ITIHAD TANGER" == $adherent[0]['Club']) $club_position =2;
+          else  $club_position =3;
+
+
+
+      $villes = array('Casablanca', 'Rabat', 'Tanger', 'Marrakech');
+      $ville_position = 0;
+          if("Casablanca" == $adherent[0]['City']) $ville_position =0;
+          else if("Rabat" == $adherent[0]['City']) $ville_position =1;
+          else if("Marrakech" == $adherent[0]['City']) $ville_position =2;
+          else  $ville_position =3;
 
   
 ?>  
