@@ -115,7 +115,7 @@ private $bdd= '';
 
 
 
-public function updateAdherent($id, $no_licence)
+public function updateAdherent($id, $no_licence, $type_d_identite, $id_identite, $nom, $prenom, $categorie, $ligue, $club, $ville, $fonction, $user)
 	{
 		
 
@@ -128,13 +128,41 @@ public function updateAdherent($id, $no_licence)
 
 		$request = $this->bdd->prepare(
 
-			  "UPDATE `finarea`.`adherent` SET `Licence No`=:no_licence WHERE `Licence No`=:id_licence"
+			  "UPDATE `finarea`.`adherent` SET `Licence No`=:no_licence,
+			  `Identity Type`=:type_d_identite,
+			  `Identity ID`=:id_identite,
+			  `Last Name`=:nom,
+			  `First Name`=:prenom,
+			  `Category`=:categorie,
+			  `League`=:ligue,
+			  `Club`=:club,
+			  `City`=:ville,
+			  `Function`=:fonction,
+			  `Last Update Date`=:time,
+			  `Updated By`=:user
+			    WHERE `Licence No`=:id_licence"
 
 
 			  );
 
+		$request->bindParam(':id_licence', $id);
+
+
+
+		$date = date("Y-m-d H:i:s");
+
 		$request->bindParam(':no_licence', $no_licence);
-		$request->bindParam(':id_licence', $id_licence);
+		$request->bindParam(':type_d_identite', $type_d_identite);
+		$request->bindParam(':id_identite', $id_identite);
+		$request->bindParam(':nom', $nom);
+		$request->bindParam(':prenom', $prenom);
+		$request->bindParam(':categorie', $categorie);
+		$request->bindParam(':ligue', $ligue);
+		$request->bindParam(':club', $club);
+		$request->bindParam(':ville', $ville);
+		$request->bindParam(':fonction', $fonction);
+		$request->bindParam(':time', $date  );
+		$request->bindParam(':user', $user);
 
 
 		if($request->execute()) 
