@@ -252,10 +252,23 @@ if(!$_SESSION['pseudo'])
     -->
 
     <select class="form-control" name="ville">
-        <option value="Casablanca">Casablanca</option>
+
+      <?php
+
+          
+        for($i=0; $i<4; $i++)
+        {
+          ?>
+          <option value="<?php echo $villes[$i] ?>" <?php if($ville_position == $i) echo 'selected="selected"' ?> ><?php echo $villes[$i] ?></option>
+          <?php
+        }
+        
+        ?>
+
+        <!--<option value="Casablanca">Casablanca</option>
         <option value="Rabat">Rabat</option>
         <option value="Tanger">Tanger</option>
-        <option value="Marrakech">Marrakech</option>
+        <option value="Marrakech">Marrakech</option>-->
       </select>
 
   </div>
