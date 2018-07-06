@@ -41,6 +41,17 @@ if(!$_SESSION['pseudo'])
           else  $category_position =1;
 
 
+
+
+      // Ligues
+
+
+      $ligues = array('GRAND CASA', 'GHARB', 'TANGER');
+      $ligue_position = 0;
+          if("GRAND CASA" == $ligues[0]['Identity Type']) $ligue_position =0;
+          else if("GHARB" == $ligues[0]['Identity Type']) $ligue_position =1;
+          else  $ligue_position =2;
+
   
 ?>  
 

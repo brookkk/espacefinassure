@@ -154,7 +154,7 @@ if(!$_SESSION['pseudo'])
 										// on tente la connexion à la base de donnée
 										try
 										 {
-										  $bdd = new PDO('mysql:host=127.0.0.1;dbname=finarea','root','');
+										  $bdd = new PDO('mysql:host=127.0.0.1;dbname=finarea','root','root');
 										 }
 										  catch (Exception $e)
 										 {
