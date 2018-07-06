@@ -211,10 +211,26 @@ if(!$_SESSION['pseudo'])
       -->
 
       <select class="form-control" name="club">
-        <option value="WAC">WAC</option>
+
+
+        <?php
+
+          
+        for($i=0; $i<4; $i++)
+        {
+          ?>
+          <option value="<?php echo $clubs[$i] ?>" <?php if($club_position == $i) echo 'selected="selected"' ?> ><?php echo $clubs[$i] ?></option>
+          <?php
+        }
+        
+        ?>
+
+
+        <!--<option value="WAC">WAC</option>
         <option value="RCA">RCA</option>
         <option value="ITIHAD TANGER">ITIHAD TANGER</option>
-        <option value="FUS">FUS</option>
+        <option value="FUS">FUS</option>-->
+
       </select>
 
     </div>
