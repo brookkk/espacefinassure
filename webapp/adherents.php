@@ -133,7 +133,7 @@ if(!$_SESSION['pseudo'])
 					-->
 				  <!-- Header -->
 				  <thead>
-                    <th class="check-header hidden-xs"><label><input id="checkAll" name="checkAll" type="checkbox"><span></span></label></th>
+                   <!-- <th class="check-header hidden-xs"><label><input id="checkAll" name="checkAll" type="checkbox"><span></span></label></th>-->
                     <th>No licence</th>
                     <th>Type d'identit&eacute;</th>
                     <th class="hidden-xs">ID identit&eacute;</th>
@@ -170,9 +170,9 @@ if(!$_SESSION['pseudo'])
 											?>
 				  
                     <tr>
-                      <td class="check hidden-xs">
+                      <!--<td class="check hidden-xs">
                         <label><input name="optionsRadios1" type="checkbox" value="option1"><span></span></label>
-                      </td>
+                      </td>-->
                       <td>
                         <?php echo $donnees['Licence No'];?>
                       </td>
