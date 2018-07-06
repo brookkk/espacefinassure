@@ -22,9 +22,12 @@ $user = $_SESSION['pseudo'];
 
 $adherent = new Crud_adherent();
 //if($adherent->ajouterAdherent($no_licence)){
-if($adherent->updateAdherent($id_adherent,$no_licence, $type_d_identite, $id_identite, $nom, $prenom, $categorie, $ligue, $club, $ville, $fonction, $user)){
-	header("Location: ../../adherents.php");
-}
+if($adherent->updateAdherent($id_adherent,$no_licence, $type_d_identite, $id_identite, $nom, $prenom, $categorie, $ligue, $club, $ville, $fonction, $user) > 0){
+	header("Location: ../../adherents.php?update_ok=1");}
+else if ($adherent->updateAdherent($id_adherent,$no_licence, $type_d_identite, $id_identite, $nom, $prenom, $categorie, $ligue, $club, $ville, $fonction, $user) == 0)
+	header("Location: ../../adherents.php?update_duplicate=1");
+
+
 
  else
  	echo $no_licence;

@@ -71,6 +71,37 @@ if(!$_SESSION['pseudo'])
         }
         ?>
 
+             <?php
+
+        if(isset($_GET['update_ok']))
+        {
+          ?>
+          <div class="alert alert-success">
+
+      <?php
+          echo "Adhérent mis à jour avec succès<br>";
+          ?>
+        </div>
+        <?php
+        }
+        ?>
+
+
+                      <?php
+
+        if(isset($_GET['update_duplicate']))
+        {
+          ?>
+          <div class="alert alert-danger">
+
+      <?php
+          echo "Erreur lors de la mise à jour: NO Licence ou ID Identité existe déjà<br>";
+          ?>
+        </div>
+        <?php
+        }
+        ?>
+
 
 
         <?php

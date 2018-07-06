@@ -128,7 +128,7 @@ public function updateAdherent($id, $no_licence, $type_d_identite, $id_identite,
 
 		$request = $this->bdd->prepare(
 
-			  "UPDATE `finarea`.`adherent` SET `Licence No`=:no_licence,
+			  "UPDATE IGNORE `finarea`.`adherent` SET `Licence No`=:no_licence,
 			  `Identity Type`=:type_d_identite,
 			  `Identity ID`=:id_identite,
 			  `Last Name`=:nom,
@@ -166,9 +166,9 @@ public function updateAdherent($id, $no_licence, $type_d_identite, $id_identite,
 
 
 		if($request->execute()) 
-			return 1;
+			return $request->rowCount();
 
-		else return 0;
+		else return -1;
 
 
 
