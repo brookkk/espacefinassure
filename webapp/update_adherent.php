@@ -52,6 +52,15 @@ if(!$_SESSION['pseudo'])
           else if("GHARB" == $adherent[0]['League']) $ligue_position =1;
           else  $ligue_position =2;
 
+
+
+      $clubs = array('WAC', 'RCA', 'ITIHAD TANGER', 'FUS');
+      $club_position = 0;
+          if("WAC" == $adherent[0]['Club']) $club_position =0;
+          else if("RCA" == $adherent[0]['Club']) $club_position =1;
+          else if("ITIHAD TANGER" == $adherent[0]['Club']) $club_position =1;
+          else  $club_position =2;
+
   
 ?>  
 
